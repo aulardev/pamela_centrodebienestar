@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: black;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* paleta de colores */
+
+/* .color1 { #2fa1bc };
+.color2 { #a4ccde };
+.color3 { #2c94a3 };
+.color4 { #4eafab };
+.color5 { #a6d8d4 }; */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: white;
+
+
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #b4dfdbf3 0%, #ffffff2b 100%), url(../images/header2.jpg);
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Nav */
+
+.nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.nav__title {
+    font-weight: 400;
+
+}
+
+.hero__logo {
+    width: 60%;
+    max-width: 560px;
+}
+
+.nav__link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+
+.nav__items {
+    list-style: none;
+}
+
+
+.nav__links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+
+}
+
+.nav__img {
+    display: block;
+    width: 30px;
+
+}
+
+.nav__close {
+    display: var(--show, none);
+    color: #fff;
+
+}
+
+/* Hero container */
+
+.hero__container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 3rem;
+}
+
+.hero__paragraph {
+    margin-bottom: 20px;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #20d5f9;
+    justify-self: center;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+/* btn whapp */ 
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+
+}
+
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #fff;
+    background: #0df053;
+}
+
+/* presentation */
+
+.presentation {
+
+    text-align: center;
+
+}
+
+.presentation__picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.presentation__copy {
+width: 80%;
+margin: 0 auto;
+padding-top: 25px;
+padding-bottom: 55px;
+line-height: 1.5;
+
+}
+
+
+
+/* servicios */
+
+.projects {
+    background: #f2f2f2
+
+}
+
+.projects__grid {
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+.projects__items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.projects__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.projects__items:nth-of-type(1) {
+    grid-area: img1;
+}
+
+.projects__items:nth-of-type(2) {
+    grid-area: img2;
+}
+
+.projects__items:nth-of-type(3) {
+    grid-area: img3;
+}
+
+.projects__items:nth-of-type(4) {
+    grid-area: img4;
+}
+
+.projects__items:nth-of-type(5) {
+    grid-area: img5;
+}
+
+.projects__hover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    transform: translateX(100%) ;
+    background: #14c8dc8c
+    
+}
+
+.projects__items:hover .projects__hover {
+    transform: translateX(0%);
+}
+
+.projects__icon {
+    margin-top: 10px;
+    font-size: 30px;
+    }
+
+
+/* section about */
+
+.about {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.about__img {
+    margin-bottom: 1em;
+}
+
+.about__picture {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.about__text {
+    flex-basis: 40%;
+}
+
+
+.about__paragraph {
+    line-height: 1.5;
+    padding: 10px 20px;
+    margin-left: 35px;
+    
+} 
+
+.cta__sobremi {
+    display: inline-block;
+    color: #fff;
+    background-color: #20d5f9;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 32px; 
+    margin-left: 35%;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+/* section location */
+
+.subtitle {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: var(--poppins);
+}
+
+
+.ubicacion__datos {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+/* Footer */ 
+
+.footer { 
+    color: #fff;
+    background-color: #2fa1bc 
+}
+
+.footer__logo {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 320px;
+
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__newsletter{
+    width: 60%;
+}
+
+
+
+.footer__title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 35px;
+    margin-bottom: 16px;
+    font-family: var(--poppins);
+}
+
+.footer__paragraph {
+    line-height: 1.5;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 35px;
+}
+
+
+.footer___form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+}
+
+.footer__input {
+    flex-basis: 100%;
+    flex-grow: 1;
+    font-size: 25px;
+    font-family: var(--open-sans);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px 27px;
+    margin-bottom: 20px;
+    
+}
+
+.footer__cta {
+    font-size: 16px;
+    font-family: var(--open-sans);
+    background-color: #20c6f9f7;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 130px;
+    font-weight: 550;
+    cursor: pointer;
+    
+}
+
+.footer__contact {
+    line-height: 50px;
+}
+
+.footer__contact::after {
+    content: "Teléfono: +54 11 4493-4555";
+    margin-left: 10px;
+}
+
+.footer__contact--email::after {
+    content: "pamela.terapia@gmail.com";
+
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-right: 5%;
+    margin-top: 30px;
+}
+
+.footer__link {
+    text-decoration: none;
+    width: 40px;
+}
+
+.footer__icon {
+    width: 100%;
+    display: block;
+}
+
+.copy__rigths {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+/* Media queries mobile */ 
+
+@media (max-width: 800px) {
+
+    .nav__menu {
+        display: block;
+    }
+
+    .nav__link--menu {
+        position: fixed;
+        background-color: #20d5f9;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+
+    }
+
+    .nav__link--show {
+        --show: block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .nav__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    /* Servicios */ 
+
+    .projects__grid{
+        grid-template-areas: 
+        "img1 img1 img2 img2"
+        "img1 img1 img3 img3"
+        "img4 img4 img5 img5";
+
+    }
+
+    /* Section about */
+
+    .about {
+        height: 100vh;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+
+    .about__img {
+        width: 90%;
+        height: 100%;
+        margin: 25em 5em 2em 1em;
+    
+    }
+    
+    .about__picture{
+        display: block;
+        
+    }
+
+    .about__paragraph {
+        line-height: 1.5;
+        padding: 1em;
+        margin: 0 auto;
+        
+    } 
+
+    .cta__sobremi {
+        display: inline-block;
+        color: #fff;
+        background-color: #20d5f9;
+        text-decoration: none;
+        margin: 0;
+        padding: 10px 22px;
+        border-radius: 32px; 
+       
+    }
+
+
+    /* Footer */ 
+
+.footer {
+    color: #fff;
+    background-color: #2fa1bc 
+}
+
+.footer__container{
+    display: block;
+}
+
+.footer__logo {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 320px;
+
+}
+
+.footer__title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 35px;
+    margin-bottom: 16px;
+    font-family: var(--poppins);
+}
+
+.footer__newsletter{
+    width: 100%;
+}
+
+.footer__paragraph {
+    line-height: 1.5;
+    margin: 16px 0 50px;
+}
+
+
+.footer___form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+}
+
+.footer__input {
+    flex-basis: 100%;
+    flex-grow: 1;
+    font-size: 25px;
+    font-family: var(--open-sans);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 5px 27px;
+    margin-bottom: 20px;
+    
+}
+
+.footer__cta {
+    font-size: 16px;
+    font-family: var(--open-sans);
+    background-color: #20c6f9f7;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 135px;
+    font-weight: 600;
+    
+}
+
+.footer__contact {
+    line-height: 50px;
+}
+
+.footer__contact::after {
+    content: "Teléfono: +54 11 4493-4555";
+    margin-left: 10px;
+}
+
+.footer__contact--email::after {
+    content: "pamela.terapia@gmail.com";
+
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.footer__link {
+    text-decoration: none;
+    width: 40px;
+}
+
+.footer__icon {
+    width: 100%;
+    display: block;
+}
+
+.copy__rigths {
+    text-align: center;
+}
+    
+
+}
