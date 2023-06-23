@@ -47,7 +47,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #b4dfdbf3 0%, #ffffff2b 100%), url(../images/header2.jpg);
+    background-image: linear-gradient(180deg, #b4dfdbf3 0%, #ffffff2b 100%), url(../images/unnamed10png.png);
     background-size: cover;
     z-index: -1;
 }
@@ -126,11 +126,12 @@ body {
 }
 
 .hero__title {
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .hero__paragraph {
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .cta {
@@ -287,6 +288,8 @@ line-height: 1.5;
 
 .about__img {
     margin-bottom: 1em;
+    
+    
 }
 
 .about__picture {
@@ -294,6 +297,9 @@ line-height: 1.5;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    
 }
 
 .about__text {
@@ -308,17 +314,6 @@ line-height: 1.5;
     
 } 
 
-.cta__sobremi {
-    display: inline-block;
-    color: #fff;
-    background-color: #20d5f9;
-    text-decoration: none;
-    padding: 13px 22px;
-    border-radius: 32px; 
-    margin-left: 35%;
-    margin-top: 10%;
-    cursor: pointer;
-}
 
 /* section location */
 
@@ -395,8 +390,8 @@ iframe {
     font-family: var(--open-sans);
     border: none;
     outline: none;
-    border-radius: 3px;
-    padding: 5px 27px;
+    border-radius: 4px;
+    padding: 5px 28px;
     margin-bottom: 20px;
     
 }
@@ -409,8 +404,8 @@ iframe {
     text-decoration: none;
     border: none;
     border-radius: 4px;
-    padding: 10px 130px;
-    font-weight: 550;
+    padding: 10px 133px;
+    font-weight: 500;
     cursor: pointer;
     
 }
@@ -420,12 +415,12 @@ iframe {
 }
 
 .footer__contact::after {
-    content: "Teléfono: +54 11 4493-4555";
+    content: "Teléfono: +598 98376379";
     margin-left: 10px;
 }
 
 .footer__contact--email::after {
-    content: "pamela.terapia@gmail.com";
+    content:"centrob.pamela@gmail.com";
 
 }
 
@@ -493,9 +488,36 @@ iframe {
 
     }
 
+    /* heroe mobile */ 
+
+    .hero__container {
+        max-width: 800px;
+        --padding-container: 0;
+        display: grid;
+        grid-auto-rows: max-content;
+        align-content: center;
+        gap: 1em;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
     .hero__title {
         font-size: 2.5rem;
     }
+
+    .hero__logo {
+        width: 80%;
+        max-width: 460px;
+    }
+
+    .presentation__copy {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 25px;
+        padding-bottom: 55px;
+        line-height: 1.5;
+        
+        }
 
     /* Servicios */ 
 
@@ -510,45 +532,69 @@ iframe {
     /* Section about */
 
     .about {
-        height: 100vh;
+        height: 45%;
         width: 100%;
-        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-    
+        gap: 2rem;
     }
 
     .about__img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 0px;
         width: 90%;
-        height: 100%;
-        margin: 25em 5em 2em 1em;
-    
+        height: 280px;
+        max-width: 280px;
+        object-fit: cover;
+        object-position: top; 
+        
     }
-    
+
     .about__picture{
         display: block;
-        
+        margin-top: 0;
+        width: 90%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
     }
-
-    .about__paragraph {
-        line-height: 1.5;
-        padding: 1em;
-        margin: 0 auto;
-        
-    } 
-
-    .cta__sobremi {
-        display: inline-block;
-        color: #fff;
-        background-color: #20d5f9;
-        text-decoration: none;
-        margin: 0;
-        padding: 10px 22px;
-        border-radius: 32px; 
+    
+    
+    .about__text {
+       text-align: center;
+       display: grid;
+       gap: 1rem;
+       
        
     }
 
+    .subtitle{
+        text-align: center;    
+    }
+
+    .about__paragraph {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 1.5;
+       
+    }
+
+    .cta {
+        display: inline-block;
+        background-color: #20d5f9;
+        justify-self: center;
+        color: white;
+        text-decoration: none;
+        padding: 15px 22px;
+        border-radius: 32px;
+        cursor: pointer;
+        margin-bottom: 100px;
+    }
 
     /* Footer */ 
 
@@ -614,7 +660,7 @@ iframe {
     text-decoration: none;
     border: none;
     border-radius: 4px;
-    padding: 10px 135px;
+    padding: 10px 125px;
     font-weight: 600;
     
 }
@@ -624,7 +670,7 @@ iframe {
 }
 
 .footer__contact::after {
-    content: "Teléfono: +54 11 4493-4555";
+    content: "Teléfono: +598 98376379";
     margin-left: 10px;
 }
 
